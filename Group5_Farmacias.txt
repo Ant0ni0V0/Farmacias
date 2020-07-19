@@ -1,0 +1,177 @@
+-- Integrantes: Mero Andrea, Molineros Carlos, Ponce Issac, Vargas Bryan
+
+group: Grupo5 
+
+Administrador = {
+	IdAdministrador:number
+	9291
+	5556
+	5557
+}
+
+Almacenamiento ={
+idMedicamento:string, Identificador:number
+123451, 9876
+123451, 9875
+123453, 9874
+}
+
+Bodega = {
+	Identificador:number, Direccion:number, idAdministrador:number
+	9876, 9087 ,5556 
+	9875, 9088 ,5557 
+	9874, 9089 ,9291 
+}
+
+Bodeguero = {
+	idBodeguero:number, idAdministrador:number, idBodega:number
+	1112, 9291, 9876
+	1113, 9291, 9874
+	1114, 4545, 9875
+}
+
+Canton ={
+	idCanton:number, Provincia:string
+	23, ZamoraChinchipe
+	1, Guayas
+	6, Manabi
+}
+
+Categoria = {
+	idCategoria:number, categoria:string
+	135, antibiotico
+	678, anti-inflamatorio
+	900, antiacido
+}
+
+Cliente={
+	Cedula:string
+	0560164256
+	0560164257
+	0560164258
+}
+
+Contacto={
+	idEmpleado:number, telefono:string
+	9290, 0052349383
+	9291, 0966628349
+	9290, 0923567890
+}
+
+
+Disponibilidad = {
+	idDisponibilidad:string, idFarmacia:number, Serie:number
+	12345, 123, 543
+	23456, 124, 542
+	34567, 125, 541
+}
+
+Egreso = {
+	idEgreso:number, FechaEgreso:date, Destino:number
+	6545, 2019-03-30, 67890
+	6546, 2019-11-09, 23456
+	6547, 2018-08-28, 12345
+}
+
+Empleado = {
+	idEmpleado:number, Cedula:string, idPuesto:number
+	9290, 0560164256, 31
+	9291, 0560164257, 32
+	9292, 0563527184, 33
+}
+
+Factura= {
+ idFactura:number, FechaFactura:date, Descripcion:string, subtotal:number, impuesto:number, descuento:number, cliente:number
+12, 2020-10-10, "2 aspirinas", 0.60, 12, 0,0560164256
+15, 2020-01-12, "3 aspirinas", 0.40, 12, 0,0560164257
+20,2020-05-10, "1 analgesico", 1.20, 12,0,0560164258
+}
+
+Farmacia = {
+	idFarmacia:number, nombre:string, direccion:number, jefe:number
+	12345, "Sana Sana", 7, 90
+	67890, "Sana Sana", 100, 3
+	23456, Fybeca, 2, 8 
+}
+
+Ingreso = {
+	idIngreso:number, FechaIngreso:date, Administrador:number, Bodeguero:number
+	6543, 2018-01-01, 9291, 1112
+	6542, 2019-04-19, 9291, 1113
+	6541, 2017-02-23, 4545, 1114
+}
+
+
+Jefe_Farmacia = {
+	idJefe:number
+	9292
+	9293
+	9297
+}
+
+Localidad = {
+  IdLocalidad:number, Latitud:number, Longitud:number, CallePrincipal:string, CalleSecundaria:string, CampoDeReferencia:string, idCanton:number 
+	9087, 20.20, 20.10, "9 de Octubre", Carchi, BancoPichincha, 1
+	9088, 30.3, 30.3, "Simón Bolivar", Pichincha , "CC. Chimborazo" , 23
+	9089, 15.4, 3.4, Huancavilca, Manabi ,"Iglesia de la Merced" , 6
+}
+
+Medicamento = {
+	Serie:string, nombreMed:string, FechaCaducidad:date, Composicion:string, Stock:number, StockMinimo:number, StockMaximo:number, Categoria:number, Presentacion:number
+	123451, Paracetamol, 2020-11-23, SodioPotasio, 65, 30, 120, 4816, 5454
+	123452, Dulcorax, 2020-09-23, ComposicionCuradora, 70, 20, 80, 4816, 5455
+	123453, Tacomatol, 2020-01-13, VitaminasABCD, 60, 15, 90, 4817, 5456
+}
+
+
+	Persona = {
+	Cedula:string, Nombre:string, ApellidoMat:string, ApellidoPat:string, CorreoElectronico:string, direccion:number
+	0560164256, Lucio, Bustamante, Rodriguez, "lucio@gmail.com", 34
+	0560164257, Oddeth, Escobar, Romero, "oddeth@gmail.com", 52
+	0560164258, Ximena, Blacio, Coronel, "ximena@outlook.com", 98
+}
+
+
+Peticion = {
+	idPeticion:number, idRegistro:number, Serie:String
+	8765, 7654, 123451
+	8764, 7653, 123452
+	8763, 7652, 123453
+}
+
+
+Presentacion ={
+	idPresentacion:number, presentacion:string
+	123452, suero
+	123453, pastilla
+}
+
+Puesto = {
+	idPuesto:number, cargo:string, salario:number
+	5432, bodeguero, 800
+	5431, administrador, 1500
+	5434, vendedor, 800
+	5435, administradorDeFarmacia, 1500
+}
+
+Registro = {
+	idRegistro:number, fechaSolicitud:date, Cantidad:number, Justificativo:string, Medicina:string
+	7654, 2020-07-28, 4, "Fediciencia de Medicina", 123451
+	7653, 2020-06-15, 16, "Yolo", 123452
+	7652, 2019-11-10, 35, "Abastecimiento", 123453
+	}
+	
+Venta= {
+ idVenta:number, Factura:number, Vendedor:number, Medicina:string
+1,12,9390,123451
+2,15,9290,123452
+3,20,9490,123453
+}
+
+
+Vendedor = {
+	idVendedor:number, idJefe:number, idFarmacia:number
+	9290, 9293, 12345
+	9390, 9293, 12345
+	9490, 9090, 23456
+}
