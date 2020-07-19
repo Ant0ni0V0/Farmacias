@@ -60,7 +60,7 @@ Contacto={
 
 
 Disponibilidad = {
-	idDisponibilidad:string, idFarmacia:number, Serie:number
+	idDisponibilidad:string, idFarmacia:number, Serie:string
 	12345, 123, 543
 	23456, 124, 542
 	34567, 125, 541
@@ -156,7 +156,7 @@ Puesto = {
 
 Registro = {
 	idRegistro:number, fechaSolicitud:date, Cantidad:number, Justificativo:string, Medicina:string
-	7654, 2020-07-28, 4, "Fediciencia de Medicina", 123451
+	7654, 2020-07-28, 4, "Deficiencia de Medicina", 123451
 	7653, 2020-06-15, 16, "Yolo", 123452
 	7652, 2019-11-10, 35, "Abastecimiento", 123453
 	}
